@@ -29,7 +29,7 @@ const AIVAPresentation: React.FC<AIVAPresentationProps> = ({ isOpen, onClose }) 
         "Contextual conversations that remember your previous questions",
         "Smart suggestions for follow-up queries"
       ],
-      imagePlaceholder: "chat-interface.jpg"
+      imagePlaceholder: "/src/components/assets/chat_interface.png"
     },
     {
       id: 2,
@@ -53,7 +53,7 @@ const AIVAPresentation: React.FC<AIVAPresentationProps> = ({ isOpen, onClose }) 
         "Custom report generation and scheduling",
         "Data export capabilities in multiple formats"
       ],
-      imagePlaceholder: "data-query-panel.jpg"
+      imagePlaceholder: "/src/components/assets/data_query_panel.png"
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ const AIVAPresentation: React.FC<AIVAPresentationProps> = ({ isOpen, onClose }) 
         "Role-based access control and permissions",
         "Collaborative annotations and comments"
       ],
-      imagePlaceholder: "workspaces.jpg"
+      imagePlaceholder: "/src/components/assets/workspaces.png"
     },
     {
       id: 5,
@@ -77,7 +77,7 @@ const AIVAPresentation: React.FC<AIVAPresentationProps> = ({ isOpen, onClose }) 
         "Tag and categorize conversations",
         "Quick access to frequently used analyses"
       ],
-      imagePlaceholder: "history-bookmarks.jpg"
+      imagePlaceholder: "/src/components/assets/chathistory.png"
     },
     {
       id: 6,
@@ -165,21 +165,8 @@ const AIVAPresentation: React.FC<AIVAPresentationProps> = ({ isOpen, onClose }) 
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             {/* Image Section */}
-            <div className="order-2 lg:order-1">
-              <div className="bg-slate-700/50 rounded-xl p-8 border border-slate-600/50 aspect-video flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-slate-600/50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🖼️</span>
-                  </div>
-                  <p className="text-slate-400 text-sm">
-                    Image: {currentSlideData.imagePlaceholder}
-                  </p>
-                  <p className="text-slate-500 text-xs mt-2">
-                    (Image placeholder - will be added via GitHub)
-                  </p>
-                </div>
-              </div>
-            </div>
+            <img src={currentSlideData.imagePlaceholder} alt="🖼️" />
+
 
             {/* Content Section */}
             <div className="order-1 lg:order-2">
